@@ -1,0 +1,290 @@
+/* --- CARTES GÉNÉRALES --- */
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.main-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-card {
+  flex: 1;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  height: fit-content;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.card h3 {
+  color: #0d6efd;
+  margin-bottom: 15px;
+}
+
+.profile-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-btn {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.profile-btn:hover {
+  background: #0b5ed7;
+}
+
+/* --- MESSAGERIE --- */
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.open-chat-btn {
+  background: #0d6efd;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.open-chat-btn:hover {
+  background: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+.notif-badge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: #ff4444;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 2px 6px;
+  font-weight: bold;
+}
+.open-chat-btn {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.open-chat-btn:hover {
+  background: #0b5ed7;
+  transform: translateY(-1px);
+}
+
+.notif-badge {
+  background: #ffd633;
+  color: #1e2a38;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 4px 7px;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 8px rgba(255, 214, 51, 0.8);
+  animation: pulse 1s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 rgba(255, 214, 51, 0.7); }
+  50% { box-shadow: 0 0 12px rgba(255, 214, 51, 1); }
+  100% { box-shadow: 0 0 0 rgba(255, 214, 51, 0.7); }
+}
+
+.open-chat-btn.active {
+  background: #1f6feb;
+  box-shadow: 0 0 10px rgba(255, 214, 51, 0.5);
+}
+
+
+/* Bouton toggle créneau déjà dans CustomSlotForm.css */
+.show-slots-btn {
+  margin-top: 10px;             /* même marge que le toggle */
+  background-color: #198754;    /* couleur différente, ici vert Bootstrap */
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 260px;
+}
+
+.show-slots-btn:hover {
+  background-color: #157347;    /* un vert plus foncé au survol */
+  transform: translateY(-2px);  /* même effet de hover que toggle */
+}
+
+
+/* SECTION CHAT */
+.chat-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Liste des patients */
+.chat-sidebar {
+  background: #1e2a38;
+  border: 1px solid #2c3e50;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.chat-user-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #243447;
+  color: #f1f3f6;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  position: relative;
+}
+
+.chat-user-item:hover {
+  background: #2e3b4a;
+}
+
+.chat-user-item.active {
+  background: #0066cc;
+  color: #fff;
+}
+
+/* Avatar + nom + statut */
+.chat-user-avatar {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.chat-user-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chat-user-name {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.chat-user-status {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.chat-user-status.online {
+  background: #27ae60;
+}
+
+.chat-user-status.offline {
+  background: #7f8c8d;
+}
+
+/* Badge de messages non lus */
+.chat-unread-badge {
+  background: #ffcc4d;
+  color: #1e2a38;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 4px 7px;
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
+  animation: pulseBadge 1s infinite;
+}
+
+/* Animation badge */
+@keyframes pulseBadge {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 204, 77, 0.6);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 6px rgba(255, 204, 77, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 204, 77, 0);
+  }
+}
+
+
+
+.chat-user-item:hover {
+  background: #3e4042;
+}
+
+.chat-user-item.active {
+  background: #41444e;
+}
+
+.chat-user-avatar {
+  margin-right: 10px;
+}
+
+.chat-unread-badge {
+  background-color: #ffc107;
+  color: #000;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-left: auto;
+}

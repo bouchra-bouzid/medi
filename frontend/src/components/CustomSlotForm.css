@@ -1,0 +1,73 @@
+/* Container du formulaire */
+.custom-slot-form {
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Champs date/heure */
+.custom-slot-form input[type="date"],
+.custom-slot-form input[type="time"] {
+  padding: 10px 12px;
+  border: 2px solid #0d6efd;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.custom-slot-form input[type="date"]:focus,
+.custom-slot-form input[type="time"]:focus {
+  outline: none;
+  border-color: #0b5ed7;
+  box-shadow: 0 0 6px rgba(13,110,253,0.3);
+}
+
+/* Bouton créer */
+.custom-slot-form button {
+  background-color: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-slot-form button:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+/* Bouton toggle pour afficher le formulaire */
+.toggle-custom-slot-btn {
+  margin-top: 10px;
+  background-color: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: all 0.3s ease;
+}
+
+.toggle-custom-slot-btn:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+}
+/* Bouton voir/masquer les créneaux libres avec alignement et style identique au bouton toggle */
+

@@ -1,0 +1,41 @@
+/* Jour avec rendez-vous */
+.react-calendar .has-appointment {
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 100%;
+}
+
+/* Hover sur jour */
+.react-calendar .has-appointment:hover {
+  background-color: #0b5ed7;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+/* Alignement calendrier */
+.react-calendar {
+  max-width: 350px;
+  margin: 0 auto 20px auto;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-confirm { background-color: #198754;  }
+.btn-cancel { background-color: #dc3545; }
+.btn-complete { background-color: #0d6efd; }
+
+.btn-confirm:hover { background-color: #0b5ed7; }
+.btn-cancel:hover { background-color: #bb2d3b; }
+.btn-complete:hover { background-color: #157347; }
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+  color: #fff; /* ✅ texte blanc pour tous */
+}

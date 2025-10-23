@@ -1,0 +1,195 @@
+/* ---- Structure principale ---- */
+.appointments-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Date sélectionnée */
+.react-calendar__tile--active {
+  background-color: #0d6efd ; /* bleu plus marqué */
+  color: #fff !important;               /* texte blanc */
+  border-radius: 50%;                   /* cercle parfait */
+  transform: scale(1.1);                /* légèrement agrandi */
+  transition: all 0.2s ease;
+}
+
+/* Date avec rendez-vous (petit cercle bleu) */
+.has-appointment {
+  position: relative;
+ 
+}
+
+.has-appointment::after {
+  content: "";
+  width: 8px;                /* petit point */
+  height: 8px;
+  background-color: #0d6efd; /* bleu */
+  border-radius: 50%;
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Optionnel : hover */
+.react-calendar__tile:hover {
+  background-color: #dbeafe !important; /* bleu clair au hover */
+  color: #000 !important;
+}
+
+/* ---- Titre principal ---- */
+.appointments-page h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0d6efd;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+/* ---- Sélecteur de date ---- */
+.appointments-page input[type="date"] {
+  display: block;
+  margin: 0 auto 30px auto;
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background: #f8f9fa;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.appointments-page input[type="date"]:hover,
+.appointments-page input[type="date"]:focus {
+  border-color: #0d6efd;
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.2);
+  outline: none;
+}
+
+/* ---- Liste des rendez-vous ---- */
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ---- Carte de rendez-vous ---- */
+.appointment-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 18px 20px;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.appointment-card:hover {
+  background: #eef3ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.1);
+}
+
+/* ---- Informations du rendez-vous ---- */
+.appointment-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.appointment-date {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.appointment-patient {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.status-badge {
+  background: #e9ecef;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #eff2f5;
+  font-size: 0.9rem;
+}
+
+/* ---- Boutons ---- */
+.appointment-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-confirm {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.btn-confirm:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+.btn-cancel {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #bb2d3b;
+  transform: translateY(-2px);
+}
+
+.btn-complete {
+  background-color: #198754;
+  color: rgb(12, 12, 12);
+}
+
+.btn-complete:hover {
+  background-color: #157347;
+  transform: translateY(-2px);
+}
+
+/* ---- États des cartes ---- */
+.appointment-card.pending {
+  border-left: 6px solid #fd7e14;
+}
+
+.appointment-card.confirmed {
+  border-left: 6px solid #0d6efd;
+}
+
+.appointment-card.cancelled {
+  border-left: 6px solid #dc3545;
+  opacity: 0.8;
+}
+
+.appointment-card.completed {
+  border-left: 6px solid #000000;
+ 
+}
+
+/* ---- Messages ---- */
+
+

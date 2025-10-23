@@ -1,0 +1,32 @@
+.footer {
+  background-color: #1a237e;
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.footer .socials a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.footer .socials a:hover {
+  color: #ffc107;
+  transform: translateY(-2px);
+}
